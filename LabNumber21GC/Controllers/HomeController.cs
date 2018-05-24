@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using LabNumber21GC.Models;
 
 namespace LabNumber21GC.Controllers
 {
@@ -33,19 +34,21 @@ namespace LabNumber21GC.Controllers
             return View();
         }
 
-        public ActionResult AddUser(string fname, string lname, string email, string phone, string pass)
+        public ActionResult AddUser(UserInfo newUser)
         {
-            string[] reg = { fname, lname, email, phone, pass };
-            //List<string> result = new List<string>();
-            //foreach (string i in reg)
-            //{
-            //    if (i == fname)
-            //    {
-            //        result.Add(i);
-            //    }
-            //}
-            ViewBag.Message = fname;
-            return View();
+            if (ModelState.IsValid)
+            {
+                ViewBag.Message = $"Hello, {newUser.Fname}";
+                return View();
+
+            }
+            else
+            {
+                ViewBag.Email = "Invalid email entered";
+                return View("Error");
+            }
+
+
         }
     }
 }
