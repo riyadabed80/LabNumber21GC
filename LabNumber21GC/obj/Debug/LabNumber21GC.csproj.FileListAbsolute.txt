@@ -89,3 +89,7 @@ c:\users\rayab\source\repos\LabNumber21GC\LabNumber21GC\obj\Debug\LabNumber21GC.
 c:\users\rayab\source\repos\LabNumber21GC\LabNumber21GC\obj\Debug\LabNumber21GC.csproj.CopyComplete
 c:\users\rayab\source\repos\LabNumber21GC\LabNumber21GC\obj\Debug\LabNumber21GC.dll
 c:\users\rayab\source\repos\LabNumber21GC\LabNumber21GC\obj\Debug\LabNumber21GC.pdb
+C:\Users\rayab\source\repos\LabNumber21GC\LabNumber21GC\bin\EntityFramework.dll
+C:\Users\rayab\source\repos\LabNumber21GC\LabNumber21GC\bin\EntityFramework.SqlServer.dll
+C:\Users\rayab\source\repos\LabNumber21GC\LabNumber21GC\bin\EntityFramework.xml
+C:\Users\rayab\source\repos\LabNumber21GC\LabNumber21GC\bin\EntityFramework.SqlServer.xml

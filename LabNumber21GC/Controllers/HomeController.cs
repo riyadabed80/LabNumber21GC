@@ -34,21 +34,26 @@ namespace LabNumber21GC.Controllers
             return View();
         }
 
-        public ActionResult AddUser(UserInfo newUser)
+        public ActionResult AddNewCustomer(User u)
         {
-            if (ModelState.IsValid)
-            {
-                ViewBag.Message = $"Hello, {newUser.Fname}";
-                return View();
+            CoffeeShopDBEntities ORM = new CoffeeShopDBEntities();
 
-            }
-            else
-            {
-                ViewBag.Email = "Invalid email entered";
-                return View("Error");
-            }
+            ORM.Users.Add(u);
+            ORM.SaveChanges();
+            ViewBag.CustomerList = ORM.Users.ToList();
+            return View("About");
 
 
         }
+
+        public ActionResult ItemsList()
+        {
+            CoffeeShopDBEntities ORM = new CoffeeShopDBEntities();
+
+            ViewBag.ItemsList = ORM.Items.ToList();
+
+            return View();
+        }
+
     }
 }
